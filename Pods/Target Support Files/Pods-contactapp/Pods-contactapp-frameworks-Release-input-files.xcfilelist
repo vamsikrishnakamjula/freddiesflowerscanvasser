@@ -1,0 +1,7 @@
+${PODS_ROOT}/Target Support Files/Pods-contactapp/Pods-contactapp-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ActionSheetPicker-3.0/ActionSheetPicker_3_0.framework
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework
+${BUILT_PRODUCTS_DIR}/StripeApplePay/StripeApplePay.framework
+${BUILT_PRODUCTS_DIR}/StripeCore/StripeCore.framework
+${BUILT_PRODUCTS_DIR}/StripeUICore/StripeUICore.framework
