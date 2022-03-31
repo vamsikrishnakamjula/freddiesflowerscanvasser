@@ -145,11 +145,19 @@
                                             <constraint firstItem="kC8-ew-quV" firstAttribute="leading" secondItem="2qc-1o-b7A" secondAttribute="leading" id="8Kv-OG-GAo"/>
                                             <constraint firstItem="3kj-Mg-PDK" firstAttribute="top" secondItem="2qc-1o-b7A" secondAttribute="top" id="9Gc-yc-br2"/>
                                             <constraint firstAttribute="trailing" secondItem="kC8-ew-quV" secondAttribute="trailing" id="KxU-dc-tdB"/>
-                                            <constraint firstItem="OAg-db-tha" firstAttribute="leading" secondItem="2qc-1o-b7A" secondAttribute="leading" constant="50" id="dPh-ob-3dQ"/>
+                                            <constraint firstItem="OAg-db-tha" firstAttribute="leading" secondItem="2qc-1o-b7A" secondAttribute="leading" constant="50" id="dPh-ob-3dQ">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="25"/>
+                                            </constraint>
                                             <constraint firstAttribute="height" constant="750" id="ljK-Xt-rfV"/>
-                                            <constraint firstAttribute="trailing" secondItem="zFy-1m-6zt" secondAttribute="trailing" constant="50" id="mK4-fN-ce0"/>
-                                            <constraint firstItem="zFy-1m-6zt" firstAttribute="leading" secondItem="2qc-1o-b7A" secondAttribute="leading" constant="50" id="oA3-Qx-UXW"/>
-                                            <constraint firstAttribute="trailing" secondItem="OAg-db-tha" secondAttribute="trailing" constant="50" id="sMp-Bq-lGb"/>
+                                            <constraint firstAttribute="trailing" secondItem="zFy-1m-6zt" secondAttribute="trailing" constant="50" id="mK4-fN-ce0">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="25"/>
+                                            </constraint>
+                                            <constraint firstItem="zFy-1m-6zt" firstAttribute="leading" secondItem="2qc-1o-b7A" secondAttribute="leading" constant="50" id="oA3-Qx-UXW">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="25"/>
+                                            </constraint>
+                                            <constraint firstAttribute="trailing" secondItem="OAg-db-tha" secondAttribute="trailing" constant="50" id="sMp-Bq-lGb">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="25"/>
+                                            </constraint>
                                             <constraint firstAttribute="trailing" secondItem="3kj-Mg-PDK" secondAttribute="trailing" id="sYb-II-pNa"/>
                                             <constraint firstItem="kC8-ew-quV" firstAttribute="top" secondItem="3kj-Mg-PDK" secondAttribute="bottom" id="t5K-PE-fSv"/>
                                             <constraint firstItem="zFy-1m-6zt" firstAttribute="top" secondItem="kC8-ew-quV" secondAttribute="bottom" constant="50" id="ulN-Nu-WZ6"/>
@@ -175,8 +183,12 @@
                             <constraint firstItem="jGb-hT-iaU" firstAttribute="top" secondItem="5xf-rR-ceQ" secondAttribute="top" id="swS-sx-E7n"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="cfI-SC-rtn" kind="unwind" identifier="toLogoutSegue" unwindAction="unwind:" id="7g2-m8-KfJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whz-GA-UDb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="cfI-SC-rtn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="85.714285714285708"/>
         </scene>

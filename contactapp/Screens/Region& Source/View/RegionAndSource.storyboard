@@ -19,11 +19,11 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Freddie's Friend" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEE-KZ-YGQ">
                                 <rect key="frame" x="50" y="201" width="734" height="34.5"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact">
-                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                    <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                 </variation>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="bmq-Gy-BVJ">
@@ -193,7 +193,6 @@
                                                 </variation>
                                                 <connections>
                                                     <action selector="nextStepBtnTouched:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="SKd-Uz-aov"/>
-                                                    <segue destination="XzU-lj-RAj" kind="presentation" modalPresentationStyle="fullScreen" id="eFB-R9-ihO"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -202,14 +201,20 @@
                                 </subviews>
                                 <variation key="heightClass=regular-widthClass=compact" spacing="30"/>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8Mk-Nw-WVg">
+                                <rect key="frame" x="398.5" y="729.5" width="37" height="37"/>
+                                <color key="color" red="0.69019607839999997" green="0.78823529410000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="bmq-Gy-BVJ" firstAttribute="top" secondItem="hEE-KZ-YGQ" secondAttribute="bottom" constant="50" id="4dN-Vo-Waz"/>
+                            <constraint firstItem="8Mk-Nw-WVg" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="B2n-bJ-hav"/>
                             <constraint firstItem="hEE-KZ-YGQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="VI3-K8-6yz">
                                 <variation key="heightClass=regular-widthClass=compact" constant="25"/>
                             </constraint>
+                            <constraint firstItem="8Mk-Nw-WVg" firstAttribute="top" secondItem="bmq-Gy-BVJ" secondAttribute="bottom" constant="50" id="aHj-C3-ofg"/>
                             <constraint firstItem="hEE-KZ-YGQ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="75" id="cBm-tx-yB3"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bmq-Gy-BVJ" secondAttribute="trailing" constant="50" id="cQn-ry-Hds">
                                 <variation key="heightClass=regular-widthClass=compact" constant="25"/>
@@ -222,13 +227,24 @@
                             </constraint>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="NsE-i4-eCW"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="NsE-i4-eCW">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" style="plain" id="xja-SN-dzM">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="logoutBtnTouched:" destination="Y6W-OH-hqX" id="qAO-JS-rlG"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="8Mk-Nw-WVg" id="t0b-0a-XQx"/>
                         <outlet property="regionLbl" destination="W3Y-Fy-Lp4" id="r62-Ds-lXJ"/>
                         <outlet property="sourceLbl" destination="xDV-kI-Pkx" id="rnc-BX-ciF"/>
+                        <segue destination="XzU-lj-RAj" kind="presentation" identifier="toSignUpSegue" modalPresentationStyle="fullScreen" id="jjp-ff-ZGl"/>
+                        <segue destination="Zfp-MQ-Ebe" kind="unwind" identifier="toLogoutSegue" unwindAction="unwind:" id="QMI-5x-mHG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Zfp-MQ-Ebe" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="773.38129496402883" y="85.929648241206024"/>
         </scene>

@@ -11,17 +11,21 @@ import Stripe
 class PaymentViewController: UIViewController {
     
     /// Outlets - Input Fields
+    @IBOutlet weak var paymentScrollView: UIScrollView!
     @IBOutlet weak var nameOnCardTxtField: UITextField!
     @IBOutlet weak var cardNumberTxtField: UITextField!
     @IBOutlet weak var expirationTxtField: UITextField!
     @IBOutlet weak var securityTxtField: UITextField!
     @IBOutlet weak var offerCodeTxtField: UITextField!
     @IBOutlet weak var collectCardDetailsBtn: UIButton!
+    @IBOutlet weak var cardNumberStkView: UIStackView!
     @IBOutlet weak var cardNumberLbl: UILabel!
+    @IBOutlet weak var offerAppliedLbl: UILabel!
     @IBOutlet weak var freshWeeklyFlowersLbl: UILabel!
     @IBOutlet weak var deliveryLbl: UILabel!
     @IBOutlet weak var salesTaxLbl: UILabel!
     @IBOutlet weak var totalLbl: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     /// Outlets - Segment Controls
     @IBOutlet weak var paymentOptionSegmentContrl: UISegmentedControl!
@@ -75,6 +79,27 @@ class PaymentViewController: UIViewController {
         task.resume()
     }
 
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.configureUI()
+    }
+    
+    fileprivate func configureUI() {
+        self.hideKeyboardOnTap()
+        self.offerAppliedLbl.isHidden = true
+        self.paymentScrollView.keyboardDismissMode = .onDrag
+        
+        for segmentItem: UIView in self.paymentOptionSegmentContrl.subviews {
+            for item : Any in segmentItem.subviews {
+                if let i = item as? UILabel {
+                    i.numberOfLines = 0
+                    i.font = UIFont(name: "Avenir-Medium", size: 20.0)!
+                }
+            }
+        }
+    }
+    
     func displayAlert(_ message: String) {
         let alertController = UIAlertController(title: "", message: message, preferredStyle: .alert)
         let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
@@ -114,7 +139,7 @@ class PaymentViewController: UIViewController {
     }
     
     /// Billing Address Switch Changes
-    @IBAction func billingAddressSwtichChanged(_ sender: UISwitch) {
+    @IBAction func billingAddressSwitchChanged(_ sender: UISwitch) {
         
     }
     
@@ -145,6 +170,6 @@ class PaymentViewController: UIViewController {
     
     /// Logout Button Touched
     @IBAction func logoutBtnTouched(_ sender: UIButton) {
-        
+        self.presentLogoutAlert()
     }
 }

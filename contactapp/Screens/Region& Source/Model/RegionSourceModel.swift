@@ -7,12 +7,21 @@
 
 import Foundation
 
-struct RegionSourceModel {
-    let region: String?
-    let source: String?
-    
-    init(region: String, source: String) {
-        self.region = region
-        self.source = source
-    }
+struct RegionsModel: Codable {
+    let data: [RegionsData]?
+}
+
+struct RegionsData: Codable {
+    let id: Int?
+    let name: String?
+}
+
+struct SourcesModel: Codable {
+    let data: [RegionsData]?
+}
+
+struct SourcesData: Codable {
+    let id: Int?
+    let name: String?
+    let card_required: Bool?
 }

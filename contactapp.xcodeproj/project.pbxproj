@@ -22,6 +22,9 @@
 		7F05AFBB27E1EA3900A5F4C7 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F05AFBA27E1EA3900A5F4C7 /* LoginModel.swift */; };
 		7F05AFBE27E1EC0F00A5F4C7 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F05AFBD27E1EC0F00A5F4C7 /* LoginViewModel.swift */; };
 		7F05AFC027E8A04A00A5F4C7 /* SamplePaymentSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F05AFBF27E8A04A00A5F4C7 /* SamplePaymentSheet.swift */; };
+		7F194A0927F50EC400E56683 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F194A0827F50EC400E56683 /* UILabel.swift */; };
+		7F194A0C27F510A800E56683 /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F194A0B27F510A800E56683 /* WebView.storyboard */; };
+		7F194A0E27F510DB00E56683 /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F194A0D27F510DB00E56683 /* WebViewVC.swift */; };
 		7FAFD04427D6105E00FF92D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FAFD04327D6105E00FF92D0 /* Assets.xcassets */; };
 		7FAFD04627D612AB00FF92D0 /* RegionAndSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAFD04527D612AB00FF92D0 /* RegionAndSourceViewController.swift */; };
 		7FAFD04927D6159200FF92D0 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAFD04827D6159200FF92D0 /* DetailsViewController.swift */; };
@@ -58,6 +61,9 @@
 		7F05AFBA27E1EA3900A5F4C7 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		7F05AFBD27E1EC0F00A5F4C7 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		7F05AFBF27E8A04A00A5F4C7 /* SamplePaymentSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamplePaymentSheet.swift; sourceTree = "<group>"; };
+		7F194A0827F50EC400E56683 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
+		7F194A0B27F510A800E56683 /* WebView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
+		7F194A0D27F510DB00E56683 /* WebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
 		7FAFD04327D6105E00FF92D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FAFD04527D612AB00FF92D0 /* RegionAndSourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionAndSourceViewController.swift; sourceTree = "<group>"; };
 		7FAFD04827D6159200FF92D0 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +109,7 @@
 		7F05AF7E27D67A6700A5F4C7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				7F194A0A27F5109400E56683 /* WebViews */,
 				7F05AFB627DAA15600A5F4C7 /* Extension */,
 				7F05AF7F27D67A7600A5F4C7 /* Designable Classes */,
 			);
@@ -324,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				7F05AFB727DAA16600A5F4C7 /* UIViewController.swift */,
+				7F194A0827F50EC400E56683 /* UILabel.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -342,6 +350,15 @@
 				7F05AFBD27E1EC0F00A5F4C7 /* LoginViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		7F194A0A27F5109400E56683 /* WebViews */ = {
+			isa = PBXGroup;
+			children = (
+				7F194A0B27F510A800E56683 /* WebView.storyboard */,
+				7F194A0D27F510DB00E56683 /* WebViewVC.swift */,
+			);
+			path = WebViews;
 			sourceTree = "<group>";
 		};
 		7FAFD04727D614E300FF92D0 /* Details, Delivery & Payment */ = {
@@ -569,6 +586,7 @@
 				7FAFD04427D6105E00FF92D0 /* Assets.xcassets in Resources */,
 				7FAFD04C27D6478F00FF92D0 /* Delivery.storyboard in Resources */,
 				7FB04A8927D60914001B0A32 /* RegionAndSource.storyboard in Resources */,
+				7F194A0C27F510A800E56683 /* WebView.storyboard in Resources */,
 				7FAFD04E27D64F1200FF92D0 /* Payment.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -624,6 +642,7 @@
 			files = (
 				7FAFD05227D6567400FF92D0 /* ThankYouViewController.swift in Sources */,
 				7F05AFBB27E1EA3900A5F4C7 /* LoginModel.swift in Sources */,
+				7F194A0E27F510DB00E56683 /* WebViewVC.swift in Sources */,
 				7F05AFBE27E1EC0F00A5F4C7 /* LoginViewModel.swift in Sources */,
 				7FBF6F6A27CF6EFB00202882 /* contactapp.xcdatamodeld in Sources */,
 				7F05AFC027E8A04A00A5F4C7 /* SamplePaymentSheet.swift in Sources */,
@@ -644,6 +663,7 @@
 				7F05AFB127D73C5300A5F4C7 /* RegionSourceModel.swift in Sources */,
 				7F05AF9F27D6A02000A5F4C7 /* RegionAndSourceNetwork.swift in Sources */,
 				7F05AFA627D7395300A5F4C7 /* DetailsNetwork.swift in Sources */,
+				7F194A0927F50EC400E56683 /* UILabel.swift in Sources */,
 				7F05AFB527D89F7A00A5F4C7 /* Global.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

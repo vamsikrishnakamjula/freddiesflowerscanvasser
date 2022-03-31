@@ -14,7 +14,7 @@ public final class AlamofireRequest {
     static let shared = AlamofireRequest()
     
     /// Generic Request with Request URL, HTTPS Method, Headers & Paramters
-    public func request(url: URL, method: HTTPMethod = .get, parameters: Parameters, onCompletion: @escaping(_ data: Data?, _ error: Error?) -> Void) {
+    public func request(url: URL, method: HTTPMethod = .get, headers: HTTPHeaders? = nil, parameters: Parameters? = nil, onCompletion: @escaping(_ data: Data?, _ error: Error?) -> Void) {
         
         let headers: HTTPHeaders = ["content-type": "application/json"]
         

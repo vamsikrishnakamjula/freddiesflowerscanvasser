@@ -40,6 +40,21 @@ extension UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    func presentLogoutAlert() {
+        let alertController = UIAlertController(title: "Logout", message: "Are you sure want to Login?", preferredStyle: UIAlertController.Style.alert)
+        let yesAction = UIAlertAction(title: "Yes", style: UIAlertAction.Style.default) { action in
+            self.presentLogin()
+        }
+        let noAction = UIAlertAction(title: "No", style: UIAlertAction.Style.cancel, handler: nil)
+        alertController.addAction(yesAction)
+        alertController.addAction(noAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func presentLogin() {
+        performSegue(withIdentifier: "toLogoutSegue", sender: self)
+    }
+    
     public struct Const {
         static let ImageSizeForLargeState: CGFloat = 75
         static let ImageLeftMargin: CGFloat = 16
@@ -70,21 +85,5 @@ extension UIViewController {
         UIView.animate(withDuration: 0.2) {
             imageView.alpha = show ? 1.0 : 0.0
         }
-    }
-    
-    public func setLogoutBarButton() {
-        let btn = UIButton(type: UIButton.ButtonType.system)
-        btn.frame = CGRect(x: 10, y: 20, width: 50, height: 50)
-        btn.setTitle("Logout", for: .normal)
-        btn.titleLabel?.font = UIFont(name: "Avenir Next" , size: 25)
-        btn.titleEdgeInsets = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
-        btn.tintColor = UIColor.black
-        btn.addTarget(self, action: #selector(handleLogout), for: .touchUpInside)
-        let right = UIBarButtonItem(customView: btn)
-        navigationController?.navigationBar.topItem?.rightBarButtonItems = [right]
-    }
-    
-    @objc func handleLogout() {
-        /// Handle Logout
     }
 }

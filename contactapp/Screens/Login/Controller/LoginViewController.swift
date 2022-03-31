@@ -12,28 +12,37 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     /// Outlets - Input Fields
     @IBOutlet weak var emailTxtField: UITextField!
     @IBOutlet weak var passwordTxtField: UITextField!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupNavigationUI()
-        self.hideKeyboardOnTap()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.setupNavigationUI()
+        self.hideKeyboardOnTap()
+        self.activityIndicator.isHidden = true
+        self.activityIndicator.stopAnimating()
         self.emailTxtField.text = "canvasser@ff.us"
         self.passwordTxtField.text = "canvasser@ff.us"
     }
     
     /// Login Button Touched
     @IBAction func loginBtnTouched(_ sender: UIButton) {
+        sender.isEnabled = false
         let errorMessage = self.validateCredentials()
         if (errorMessage != "") {
             self.presentAlert(title: "Invalid Credentials!", message: errorMessage)
+            sender.isEnabled = true
         } else {
             if let email = self.emailTxtField.text,
                let password = self.passwordTxtField.text {
+                self.activityIndicator.isHidden = false
+                self.activityIndicator.startAnimating()
                 LoginNetwork.shared.login(email: email, password: password) { response, error in
+                    self.activityIndicator.isHidden = true
+                    self.activityIndicator.stopAnimating()
                     if (error != nil) {
                         self.presentAlert(title: "Something went wrong", message: error?.localizedDescription ?? "")
                     } else if let loginResponse = response {
@@ -41,6 +50,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
                         self.performSegue(withIdentifier: "toRegionsAndSourceSegue", sender: nil)
                     }
                 }
+                sender.isEnabled = true
             }
         }
     }
@@ -75,4 +85,6 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         
         return ""
     }
+    
+    @IBAction func unwind( _ seg: UIStoryboardSegue) {}
 }

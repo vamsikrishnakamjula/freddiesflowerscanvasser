@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 public final class LoginNetwork {
     
@@ -24,8 +25,9 @@ public final class LoginNetwork {
         }
         
         let parameters = ["email": email, "password": password]
+        let headers: HTTPHeaders = ["content-type": "application/json"]
         
-        AlamofireRequest.shared.request(url: loginURL, method: .post, parameters: parameters) { data, error in
+        AlamofireRequest.shared.request(url: loginURL, method: .post, headers: headers, parameters: parameters) { data, error in
             if (error != nil) {
                 onCompletion(nil, error)
             } else if let responseData = data {

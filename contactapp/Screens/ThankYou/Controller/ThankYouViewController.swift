@@ -21,6 +21,6 @@ class ThankYouViewController: UIViewController {
     
     /// Logout Button Touched
     @IBAction func logoutBtnTouched(_ sender: UIButton) {
-        
+        self.presentLogoutAlert()
     }
 }
