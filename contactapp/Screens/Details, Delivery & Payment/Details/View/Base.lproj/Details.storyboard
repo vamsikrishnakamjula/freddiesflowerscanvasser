@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gt-Qg-3iU">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0gt-Qg-3iU">
                                 <rect key="frame" x="0.0" y="126" width="834" height="1574"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xdM-CW-ILE">
@@ -229,9 +229,6 @@ All for just $49 a box</string>
                                                                     </label>
                                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m8n-E8-0QC">
                                                                         <rect key="frame" x="685" y="22" width="51" height="31"/>
-                                                                        <connections>
-                                                                            <action selector="promotionsSwitchChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="b0Q-Tb-iHP"/>
-                                                                        </connections>
                                                                     </switch>
                                                                 </subviews>
                                                                 <constraints>
@@ -305,7 +302,7 @@ All for just $49 a box</string>
                                                 <rect key="frame" x="398.5" y="1504" width="37" height="37"/>
                                                 <color key="color" red="0.69019607839999997" green="0.78823529410000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                             </activityIndicatorView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Customer Details" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KU1-cd-JWs">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Details" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KU1-cd-JWs">
                                                 <rect key="frame" x="50" y="30" width="734" height="41"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
                                                 <nil key="textColor"/>

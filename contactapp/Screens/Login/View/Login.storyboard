@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YPO-NX-Ru9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -17,6 +17,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hy9-pv-HhR">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="125"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Vzs-AH-zAz">
+                                        <rect key="frame" x="367" y="15" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="Swc-xV-Ize">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="75"/>
+                                            </constraint>
+                                            <constraint firstAttribute="width" constant="100" id="XUG-ZD-wEp">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="75"/>
+                                            </constraint>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.57647058819999997" green="0.47058823529999999" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Vzs-AH-zAz" secondAttribute="bottom" constant="10" id="ADi-gt-xKX"/>
+                                    <constraint firstAttribute="height" constant="125" id="MSW-CL-3g4"/>
+                                    <constraint firstItem="Vzs-AH-zAz" firstAttribute="centerX" secondItem="Hy9-pv-HhR" secondAttribute="centerX" id="x7U-gi-wG7"/>
+                                </constraints>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="BQs-9D-m53">
                                 <rect key="frame" x="50" y="347.5" width="734" height="499"/>
                                 <subviews>
@@ -177,9 +199,12 @@
                             <constraint firstAttribute="trailing" secondItem="BQs-9D-m53" secondAttribute="trailing" constant="50" id="92L-e8-mx1">
                                 <variation key="heightClass=regular-widthClass=compact" constant="25"/>
                             </constraint>
+                            <constraint firstItem="Hy9-pv-HhR" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Nt6-qB-8vr"/>
+                            <constraint firstItem="lKg-jN-L5v" firstAttribute="trailing" secondItem="Hy9-pv-HhR" secondAttribute="trailing" id="bQ8-TK-Sc3"/>
                             <constraint firstItem="BQs-9D-m53" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="bs0-Rd-Rtg"/>
                             <constraint firstItem="jFi-T6-BHi" firstAttribute="top" secondItem="BQs-9D-m53" secondAttribute="bottom" constant="50" id="sgP-Pc-A4T"/>
                             <constraint firstItem="jFi-T6-BHi" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="yk0-Y4-0fn"/>
+                            <constraint firstItem="Hy9-pv-HhR" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="zda-Ti-283"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="RiA-NY-HFe"/>
@@ -204,31 +229,10 @@
             </objects>
             <point key="canvasLocation" x="1271.5827338129498" y="185.92964824120602"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="oiF-un-CCZ">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YPO-NX-Ru9" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="H0Q-5h-mVj">
-                        <rect key="frame" x="0.0" y="24" width="834" height="102"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.57647058819999997" green="0.47058823529999999" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <textAttributes key="largeTitleTextAttributes">
-                            <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="OnW-dN-m6V"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ozC-E6-BJg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="19.424460431654676" y="85.929648241206024"/>
-        </scene>
     </scenes>
     <resources>
         <image name="hidden" width="35" height="35"/>
+        <image name="logo" width="200" height="118"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

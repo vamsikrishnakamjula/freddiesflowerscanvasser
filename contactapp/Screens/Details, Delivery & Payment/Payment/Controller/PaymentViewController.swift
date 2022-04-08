@@ -88,6 +88,8 @@ class PaymentViewController: UIViewController {
     fileprivate func configureUI() {
         self.hideKeyboardOnTap()
         self.offerAppliedLbl.isHidden = true
+        
+        self.paymentScrollView.setContentOffset(CGPoint.zero, animated: true)
         self.paymentScrollView.keyboardDismissMode = .onDrag
         
         for segmentItem: UIView in self.paymentOptionSegmentContrl.subviews {

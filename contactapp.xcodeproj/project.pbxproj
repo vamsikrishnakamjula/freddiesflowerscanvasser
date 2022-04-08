@@ -16,7 +16,6 @@
 		7F05AFA827D739B000A5F4C7 /* DeliveryNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F05AFA727D739B000A5F4C7 /* DeliveryNetwork.swift */; };
 		7F05AFAA27D739D200A5F4C7 /* PaymentNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F05AFA927D739D200A5F4C7 /* PaymentNetwork.swift */; };
 		7F05AFB127D73C5300A5F4C7 /* RegionSourceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F05AFB027D73C5300A5F4C7 /* RegionSourceModel.swift */; };
-		7F05AFB327D73CAE00A5F4C7 /* RegionSourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F05AFB227D73CAE00A5F4C7 /* RegionSourceViewModel.swift */; };
 		7F05AFB527D89F7A00A5F4C7 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F05AFB427D89F7A00A5F4C7 /* Global.swift */; };
 		7F05AFB827DAA16600A5F4C7 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F05AFB727DAA16600A5F4C7 /* UIViewController.swift */; };
 		7F05AFBB27E1EA3900A5F4C7 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F05AFBA27E1EA3900A5F4C7 /* LoginModel.swift */; };
@@ -25,6 +24,10 @@
 		7F194A0927F50EC400E56683 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F194A0827F50EC400E56683 /* UILabel.swift */; };
 		7F194A0C27F510A800E56683 /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F194A0B27F510A800E56683 /* WebView.storyboard */; };
 		7F194A0E27F510DB00E56683 /* WebViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F194A0D27F510DB00E56683 /* WebViewVC.swift */; };
+		7F194A1127F658CF00E56683 /* SuperView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F194A1027F658CF00E56683 /* SuperView.storyboard */; };
+		7F194A1327F6686D00E56683 /* SuperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F194A1227F6686D00E56683 /* SuperViewController.swift */; };
+		7F241F452800B19E006C0A36 /* DetailsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F241F442800B19E006C0A36 /* DetailsModel.swift */; };
+		7F241F472800BC25006C0A36 /* CustomerDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F241F462800BC25006C0A36 /* CustomerDetails.swift */; };
 		7FAFD04427D6105E00FF92D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FAFD04327D6105E00FF92D0 /* Assets.xcassets */; };
 		7FAFD04627D612AB00FF92D0 /* RegionAndSourceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAFD04527D612AB00FF92D0 /* RegionAndSourceViewController.swift */; };
 		7FAFD04927D6159200FF92D0 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FAFD04827D6159200FF92D0 /* DetailsViewController.swift */; };
@@ -55,7 +58,6 @@
 		7F05AFA727D739B000A5F4C7 /* DeliveryNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryNetwork.swift; sourceTree = "<group>"; };
 		7F05AFA927D739D200A5F4C7 /* PaymentNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentNetwork.swift; sourceTree = "<group>"; };
 		7F05AFB027D73C5300A5F4C7 /* RegionSourceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSourceModel.swift; sourceTree = "<group>"; };
-		7F05AFB227D73CAE00A5F4C7 /* RegionSourceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionSourceViewModel.swift; sourceTree = "<group>"; };
 		7F05AFB427D89F7A00A5F4C7 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		7F05AFB727DAA16600A5F4C7 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		7F05AFBA27E1EA3900A5F4C7 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
@@ -64,6 +66,10 @@
 		7F194A0827F50EC400E56683 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
 		7F194A0B27F510A800E56683 /* WebView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
 		7F194A0D27F510DB00E56683 /* WebViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewVC.swift; sourceTree = "<group>"; };
+		7F194A1027F658CF00E56683 /* SuperView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SuperView.storyboard; sourceTree = "<group>"; };
+		7F194A1227F6686D00E56683 /* SuperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperViewController.swift; sourceTree = "<group>"; };
+		7F241F442800B19E006C0A36 /* DetailsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsModel.swift; sourceTree = "<group>"; };
+		7F241F462800BC25006C0A36 /* CustomerDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDetails.swift; sourceTree = "<group>"; };
 		7FAFD04327D6105E00FF92D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7FAFD04527D612AB00FF92D0 /* RegionAndSourceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionAndSourceViewController.swift; sourceTree = "<group>"; };
 		7FAFD04827D6159200FF92D0 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -157,14 +163,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		7F05AF8827D69C6D00A5F4C7 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				7F05AFB227D73CAE00A5F4C7 /* RegionSourceViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		7F05AF8927D69C7500A5F4C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,16 +187,10 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		7F05AF8C27D69C9000A5F4C7 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		7F05AF8D27D69C9600A5F4C7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7F241F442800B19E006C0A36 /* DetailsModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -361,9 +353,20 @@
 			path = WebViews;
 			sourceTree = "<group>";
 		};
+		7F194A0F27F658B800E56683 /* Super View */ = {
+			isa = PBXGroup;
+			children = (
+				7F194A1027F658CF00E56683 /* SuperView.storyboard */,
+				7F241F462800BC25006C0A36 /* CustomerDetails.swift */,
+				7F194A1227F6686D00E56683 /* SuperViewController.swift */,
+			);
+			path = "Super View";
+			sourceTree = "<group>";
+		};
 		7FAFD04727D614E300FF92D0 /* Details, Delivery & Payment */ = {
 			isa = PBXGroup;
 			children = (
+				7F194A0F27F658B800E56683 /* Super View */,
 				7FAFD04A27D646AC00FF92D0 /* Details */,
 				7FB04A7C27CF70A4001B0A32 /* Delivery */,
 				7FB04A7E27CF70BD001B0A32 /* Payment */,
@@ -377,7 +380,6 @@
 				7F05AF8A27D69C8100A5F4C7 /* View */,
 				7F05AF8B27D69C8A00A5F4C7 /* Controller */,
 				7F05AF8D27D69C9600A5F4C7 /* Model */,
-				7F05AF8C27D69C9000A5F4C7 /* ViewModel */,
 				7F05AFA227D738D500A5F4C7 /* Network */,
 			);
 			path = Details;
@@ -472,7 +474,6 @@
 				7F05AF8627D69C5B00A5F4C7 /* View */,
 				7F05AF8727D69C6300A5F4C7 /* Controller */,
 				7F05AF8927D69C7500A5F4C7 /* Model */,
-				7F05AF8827D69C6D00A5F4C7 /* ViewModel */,
 				7F05AF9D27D6A00700A5F4C7 /* Network */,
 			);
 			path = "Region& Source";
@@ -581,6 +582,7 @@
 			files = (
 				7FBF6F6F27CF6EFD00202882 /* LaunchScreen.storyboard in Resources */,
 				7FB04A8127CF70EB001B0A32 /* ThankYou.storyboard in Resources */,
+				7F194A1127F658CF00E56683 /* SuperView.storyboard in Resources */,
 				7FB04A8427D60311001B0A32 /* Login.storyboard in Resources */,
 				7FBF6F6727CF6EFB00202882 /* Details.storyboard in Resources */,
 				7FAFD04427D6105E00FF92D0 /* Assets.xcassets in Resources */,
@@ -640,6 +642,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F241F472800BC25006C0A36 /* CustomerDetails.swift in Sources */,
 				7FAFD05227D6567400FF92D0 /* ThankYouViewController.swift in Sources */,
 				7F05AFBB27E1EA3900A5F4C7 /* LoginModel.swift in Sources */,
 				7F194A0E27F510DB00E56683 /* WebViewVC.swift in Sources */,
@@ -654,12 +657,13 @@
 				7F05AFAA27D739D200A5F4C7 /* PaymentNetwork.swift in Sources */,
 				7FAFD05027D6563900FF92D0 /* PaymentViewController.swift in Sources */,
 				7FAFD04627D612AB00FF92D0 /* RegionAndSourceViewController.swift in Sources */,
+				7F194A1327F6686D00E56683 /* SuperViewController.swift in Sources */,
 				7FBF6F6027CF6EFB00202882 /* AppDelegate.swift in Sources */,
 				7FBF6F6227CF6EFB00202882 /* SceneDelegate.swift in Sources */,
 				7F05AFB827DAA16600A5F4C7 /* UIViewController.swift in Sources */,
 				7F05AF8127D67AA100A5F4C7 /* DesignableView.swift in Sources */,
-				7F05AFB327D73CAE00A5F4C7 /* RegionSourceViewModel.swift in Sources */,
 				7FAFD04927D6159200FF92D0 /* DetailsViewController.swift in Sources */,
+				7F241F452800B19E006C0A36 /* DetailsModel.swift in Sources */,
 				7F05AFB127D73C5300A5F4C7 /* RegionSourceModel.swift in Sources */,
 				7F05AF9F27D6A02000A5F4C7 /* RegionAndSourceNetwork.swift in Sources */,
 				7F05AFA627D7395300A5F4C7 /* DetailsNetwork.swift in Sources */,

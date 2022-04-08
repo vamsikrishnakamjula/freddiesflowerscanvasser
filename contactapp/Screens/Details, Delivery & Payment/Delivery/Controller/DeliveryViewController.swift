@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ActionSheetPicker_3_0
 
 class DeliveryViewController: UIViewController {
 
@@ -27,6 +28,9 @@ class DeliveryViewController: UIViewController {
     @IBOutlet weak var offerCodeTxtField: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
+    /// Stored Properties
+    var states: [String] = ["California"]
+
     /// Outlets - Segment Controls
     @IBOutlet weak var buildingSegmentContrl: UISegmentedControl!
     
@@ -47,6 +51,7 @@ class DeliveryViewController: UIViewController {
         self.activityIndicator.isHidden = true
         self.activityIndicator.stopAnimating()
         
+        self.deliveryScrollView.setContentOffset(CGPoint.zero, animated: true)
         self.deliveryScrollView.keyboardDismissMode = .onDrag
         
         for segmentItem: UIView in self.buildingSegmentContrl.subviews {
@@ -86,6 +91,21 @@ class DeliveryViewController: UIViewController {
         self.salesTaxLbl.text = "$00.00"
         self.totalLbl.text = "$00.00"
         self.offerCodeTxtField.text = ""
+    }
+    
+    @IBAction func firstDeliveryArriveBtnTouched(_ sender: UIButton) {
+        ActionSheetStringPicker.show(withTitle: "States",
+                                     rows: states,
+                                             initialSelection: 0,
+                                             doneBlock: { picker, index, value in
+                                            self.deliveryLbl.text = self.states[index]
+                                            self.deliveryLbl.textColor = UIColor.black
+                                                return
+                                             },
+                                             cancel: { picker in
+                                                return
+                                             },
+                                             origin: sender)
     }
     
     /// Promotions Switch Changes

@@ -105,7 +105,7 @@ class RegionAndSourceViewController: UIViewController {
         }
     }
     
-    @IBAction func logoutBtnTouched(_ sender: UIBarButtonItem) {
+    @IBAction func logoutBtnTouched(_ sender: UIButton) {
         self.presentLogoutAlert()
     }
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Q1D-zO-feb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="ipad11_0rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -17,8 +17,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfb-Ms-JRV">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="125"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="6qj-zO-cHw">
+                                        <rect key="frame" x="367" y="15" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="bOL-Up-HiX">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="75"/>
+                                            </constraint>
+                                            <constraint firstAttribute="height" constant="100" id="zKO-Vx-7g7">
+                                                <variation key="heightClass=regular-widthClass=compact" constant="75"/>
+                                            </constraint>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1UZ-Vl-am1">
+                                        <rect key="frame" x="702" y="41.5" width="82" height="47"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Logout">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="logoutBtnTouched:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="nvc-u8-Pgl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.57647058819999997" green="0.47058823529999999" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="1UZ-Vl-am1" firstAttribute="centerY" secondItem="6qj-zO-cHw" secondAttribute="centerY" id="H2S-cu-WJ1"/>
+                                    <constraint firstAttribute="trailing" secondItem="1UZ-Vl-am1" secondAttribute="trailing" constant="50" id="INa-cQ-cUe">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="25"/>
+                                    </constraint>
+                                    <constraint firstAttribute="bottom" secondItem="6qj-zO-cHw" secondAttribute="bottom" constant="10" id="lt7-8P-LCr"/>
+                                    <constraint firstItem="6qj-zO-cHw" firstAttribute="centerX" secondItem="xfb-Ms-JRV" secondAttribute="centerX" id="qTa-WQ-4Qu"/>
+                                    <constraint firstAttribute="height" constant="125" id="wkH-QF-AGe"/>
+                                </constraints>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Freddie's Friend" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEE-KZ-YGQ">
-                                <rect key="frame" x="50" y="201" width="734" height="34.5"/>
+                                <rect key="frame" x="50" y="175" width="734" height="34.5"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -27,7 +67,7 @@
                                 </variation>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="bmq-Gy-BVJ">
-                                <rect key="frame" x="50" y="285.5" width="734" height="394"/>
+                                <rect key="frame" x="50" y="259.5" width="734" height="394"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="RCd-SL-8pb">
                                         <rect key="frame" x="0.0" y="0.0" width="734" height="269"/>
@@ -202,7 +242,7 @@
                                 <variation key="heightClass=regular-widthClass=compact" spacing="30"/>
                             </stackView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8Mk-Nw-WVg">
-                                <rect key="frame" x="398.5" y="729.5" width="37" height="37"/>
+                                <rect key="frame" x="398.5" y="703.5" width="37" height="37"/>
                                 <color key="color" red="0.69019607839999997" green="0.78823529410000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
                         </subviews>
@@ -211,11 +251,14 @@
                         <constraints>
                             <constraint firstItem="bmq-Gy-BVJ" firstAttribute="top" secondItem="hEE-KZ-YGQ" secondAttribute="bottom" constant="50" id="4dN-Vo-Waz"/>
                             <constraint firstItem="8Mk-Nw-WVg" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="B2n-bJ-hav"/>
+                            <constraint firstItem="hEE-KZ-YGQ" firstAttribute="top" secondItem="xfb-Ms-JRV" secondAttribute="bottom" constant="50" id="UOy-pI-Qnh"/>
+                            <constraint firstItem="xfb-Ms-JRV" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="Uzu-q4-7qr"/>
                             <constraint firstItem="hEE-KZ-YGQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="VI3-K8-6yz">
                                 <variation key="heightClass=regular-widthClass=compact" constant="25"/>
                             </constraint>
+                            <constraint firstItem="xfb-Ms-JRV" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="ZeC-x2-n9M"/>
                             <constraint firstItem="8Mk-Nw-WVg" firstAttribute="top" secondItem="bmq-Gy-BVJ" secondAttribute="bottom" constant="50" id="aHj-C3-ofg"/>
-                            <constraint firstItem="hEE-KZ-YGQ" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="75" id="cBm-tx-yB3"/>
+                            <constraint firstItem="xfb-Ms-JRV" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="avl-XQ-M99"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bmq-Gy-BVJ" secondAttribute="trailing" constant="50" id="cQn-ry-Hds">
                                 <variation key="heightClass=regular-widthClass=compact" constant="25"/>
                             </constraint>
@@ -230,9 +273,6 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="NsE-i4-eCW">
                         <barButtonItem key="rightBarButtonItem" title="Logout" style="plain" id="xja-SN-dzM">
                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <action selector="logoutBtnTouched:" destination="Y6W-OH-hqX" id="qAO-JS-rlG"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -248,10 +288,10 @@
             </objects>
             <point key="canvasLocation" x="773.38129496402883" y="85.929648241206024"/>
         </scene>
-        <!--Details-->
+        <!--SuperView-->
         <scene sceneID="54v-Hh-xVi">
             <objects>
-                <viewControllerPlaceholder storyboardName="Details" id="XzU-lj-RAj" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="SuperView" id="XzU-lj-RAj" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YiN-Wn-Nst" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1251.7985611510792" y="168.84422110552765"/>
@@ -270,9 +310,6 @@
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="9vk-FY-18W"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o59-x9-mdz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -281,6 +318,7 @@
     </scenes>
     <resources>
         <image name="arrow" width="35" height="35"/>
+        <image name="logo" width="200" height="118"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

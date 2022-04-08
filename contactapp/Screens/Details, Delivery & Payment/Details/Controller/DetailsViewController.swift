@@ -35,6 +35,8 @@ class DetailsViewController: UIViewController {
     fileprivate func configureUI() {
         self.setupNavigationUI()
         self.hideKeyboardOnTap()
+        
+        self.detailsScrollView.setContentOffset(CGPoint.zero, animated: true)
         self.detailsScrollView.keyboardDismissMode = .onDrag
         
         self.activityIndicator.isHidden = true
@@ -62,11 +64,6 @@ class DetailsViewController: UIViewController {
         self.passwordTxtField.text = ""
     }
     
-    /// Promotions Switch Changes
-    @IBAction func promotionsSwitchChanged(_ sender: UISwitch) {
-        
-    }
-    
     /// Privacy Button Touched
     @IBAction func privacyPolicyBtnTouched(_ sender: UIButton) {
         
@@ -84,9 +81,34 @@ class DetailsViewController: UIViewController {
             self.activityIndicator.stopAnimating()
             sender.isEnabled = true
         } else {
-            self.activityIndicator.isHidden = true
-            self.activityIndicator.stopAnimating()
-            self.performSegue(withIdentifier: "toDeliverySegue", sender: nil)
+            /// Email Check
+            DetailsNetwork.shared.checkEmail(email: self.emailTxtField.text ?? "") { data, error in
+                if (error != nil) {
+                    self.presentAlert(title: "Sources Error", message: error?.localizedDescription ?? "")
+                } else if let responseData = data {
+                    if let success = responseData.status, success {
+                        let customerDetails = CustomerDetails(firstName: self.firstNameTxtField.text ?? "", lastName: self.lastNameTxtField.text ?? "", email: self.emailTxtField.text ?? "", password: self.passwordTxtField.text ?? "", telephone: "", optInMarketing: self.promotionsSwitch.isOn, optInThirdPartyMarketing: self.promotionsSwitch.isOn, delivery: nil, offer: nil)
+                        DetailsNetwork.shared.signUp(details: customerDetails) { data, error in
+                            if (error != nil) {
+                                self.presentAlert(title: "Sources Error", message: error?.localizedDescription ?? "")
+                            } else if let responseData = data {
+                                if let success = responseData.status, success {
+                                    /// Success Navigation to Delivery details
+                                } else {
+                                    self.presentAlert(title: "Error!", message: "Something went wrong, please try again later.")
+                                }
+                            }
+                        }
+                    } else {
+                        self.presentAlert(title: "Error!", message: "Email is invalid, please try again.")
+                    }
+                    self.activityIndicator.isHidden = true
+                    self.activityIndicator.stopAnimating()
+                    self.activityIndicator.isHidden = true
+                    self.activityIndicator.stopAnimating()
+                    sender.isEnabled = true
+                }
+            }
         }
     }
     

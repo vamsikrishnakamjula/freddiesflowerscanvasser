@@ -64,7 +64,7 @@
                                     <constraint firstItem="8Sn-Im-YCW" firstAttribute="top" secondItem="iFb-U2-bGq" secondAttribute="top" constant="20" id="zB7-av-4pL"/>
                                 </constraints>
                             </view>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6P-bm-XUd">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6P-bm-XUd">
                                 <rect key="frame" x="0.0" y="150" width="834" height="2550"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Sf-U5-apB">
