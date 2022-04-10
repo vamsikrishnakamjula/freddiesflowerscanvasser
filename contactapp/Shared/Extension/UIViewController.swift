@@ -40,6 +40,13 @@ extension UIViewController {
         self.present(alertController, animated: true, completion: nil)
     }
     
+    func presentPrivacyPolicyView() {
+        let storyboard = UIStoryboard(name: "Privacy", bundle: nil)
+        if let privacyVC = storyboard.instantiateInitialViewController() as? PrivacyViewController {
+            self.present(privacyVC, animated: true, completion: nil)
+        }
+    }
+    
     func presentLogoutAlert() {
         let alertController = UIAlertController(title: "Logout", message: "Are you sure want to Login?", preferredStyle: UIAlertController.Style.alert)
         let yesAction = UIAlertAction(title: "Yes", style: UIAlertAction.Style.default) { action in

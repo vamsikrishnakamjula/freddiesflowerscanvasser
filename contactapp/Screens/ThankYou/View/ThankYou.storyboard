@@ -131,7 +131,6 @@
                                                         </variation>
                                                         <connections>
                                                             <action selector="finishedBtnTouched:" destination="rT7-wh-7bJ" eventType="touchUpInside" id="8Ks-I3-56O"/>
-                                                            <segue destination="fnD-M6-yAu" kind="presentation" modalPresentationStyle="fullScreen" id="AMI-id-yzJ"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -191,14 +190,6 @@
                 <exit id="cfI-SC-rtn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="85.714285714285708"/>
-        </scene>
-        <!--Details-->
-        <scene sceneID="5h4-yq-H9N">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Details" id="fnD-M6-yAu" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="So1-hh-VA6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="560" y="91"/>
         </scene>
     </scenes>
     <resources>

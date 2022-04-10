@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol SuperViewDetailsDelegate {
+    func updateCustomerDetails(details: CustomerDetails, yourDetails: Bool, delivery: Bool, paymentDetails: Bool)
+}
+
 struct CustomerDetails {
     let firstName: String?
     let lastName: String?
@@ -20,7 +24,7 @@ struct CustomerDetails {
 }
 
 struct DeliveryDetails {
-    let deliveryAddressHoseNumber: String?
+    let deliveryAddressHouseNumber: String?
     let deliveryAddressLineOne: String?
     let deliveryAddressLineTwo: String?
     let deliveryAddressCity: String?

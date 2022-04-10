@@ -23,7 +23,7 @@ class SuperViewController: UIViewController {
     @IBOutlet weak var paymentDetailsContainverView: UIView!
     
     /// Stored Properties
-    var customerDetails = ""
+    var customerDetails: CustomerDetails?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +36,23 @@ class SuperViewController: UIViewController {
     
     fileprivate func configureUI() {
         /// Initially show your details container view
-        self.setTopNavigationViews(yourDetails: true, delivery: false, paymentDetails: false)
+        self.setTopNavigationViews(yourDetails: false, delivery: false, paymentDetails: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "toDetailsSegue") {
+            if let customerDetailsVC = segue.destination as? DetailsViewController {
+                customerDetailsVC.delegate = self
+            }
+        } else if (segue.identifier == "toDeliverySegue") {
+            if let deliveryVC = segue.destination as? DeliveryViewController {
+                deliveryVC.delegate = self
+            }
+        } else if (segue.identifier == "toPaymentDetailsSegue") {
+            if let paymentDetailsVC = segue.destination as? PaymentViewController {
+                paymentDetailsVC.delegate = self
+            }
+        }
     }
     
     fileprivate func setTopNavigationViews(yourDetails: Bool, delivery: Bool, paymentDetails: Bool) {
@@ -127,5 +143,12 @@ class SuperViewController: UIViewController {
     
     @IBAction func logoutBtnTouched(_ sender: UIButton) {
         self.presentLogoutAlert()
+    }
+}
+
+extension SuperViewController: SuperViewDetailsDelegate {
+    func updateCustomerDetails(details: CustomerDetails, yourDetails: Bool, delivery: Bool, paymentDetails: Bool) {
+        self.customerDetails = details
+        self.setTopNavigationViews(yourDetails: yourDetails, delivery: delivery, paymentDetails: paymentDetails)
     }
 }

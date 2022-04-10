@@ -23,6 +23,9 @@ class DetailsViewController: UIViewController {
     var region = ""
     var source = ""
     
+    /// Delegate
+    var delegate: SuperViewDetailsDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -66,7 +69,7 @@ class DetailsViewController: UIViewController {
     
     /// Privacy Button Touched
     @IBAction func privacyPolicyBtnTouched(_ sender: UIButton) {
-        
+        self.presentPrivacyPolicyView()
     }
     
     /// Next Step Button Touched
@@ -94,6 +97,7 @@ class DetailsViewController: UIViewController {
                             } else if let responseData = data {
                                 if let success = responseData.status, success {
                                     /// Success Navigation to Delivery details
+                                    self.delegate?.updateCustomerDetails(details: customerDetails, yourDetails: false, delivery: true, paymentDetails: false)
                                 } else {
                                     self.presentAlert(title: "Error!", message: "Something went wrong, please try again later.")
                                 }
