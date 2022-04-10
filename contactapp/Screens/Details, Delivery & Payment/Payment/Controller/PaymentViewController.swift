@@ -325,6 +325,76 @@ class PaymentViewController: UIViewController {
     
     /// Sign Me Up Button Touched
     @IBAction func signMeUpBtnTouched(_ sender: UIButton) {
+        self.activityIndicator.isHidden = false
+        self.activityIndicator.startAnimating()
+        sender.isEnabled = false
+        let errorMessage = self.validateInputFields()
+        if (errorMessage != "") {
+            self.presentAlert(title: "Error!", message: errorMessage)
+            self.activityIndicator.isHidden = true
+            self.activityIndicator.stopAnimating()
+            sender.isEnabled = true
+        } else {
+//            if let details = self.customerDetails {
+//                self.performSegue(withIdentifier: "toThankYouSegue", sender: nil)
+//            } else {
+//                self.presentAlert(title: "Error!", message: "Something went wrong, please try again later.")
+//            }
+            self.performSegue(withIdentifier: "toThankYouSegue", sender: nil)
+            self.activityIndicator.isHidden = true
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.isHidden = true
+            self.activityIndicator.stopAnimating()
+            sender.isEnabled = true
+        }
+    }
+    
+    /// Check for required input fields
+    fileprivate func validateInputFields() -> String {
+        if (self.paymentOptionSegmentContrl.selectedSegmentIndex == 1 && !self.onlinePaymentSwitch.isOn) {
+            if let cardName = self.nameOnCardTxtField.text, cardName == "" {
+                return "Please enter card holder name."
+            }
+            
+            if let cardNumber = self.cardNumberTxtField.text, cardNumber == "" {
+                return "Please enter card number."
+            }
+            
+            if let cardExpiration = self.expirationTxtField.text, cardExpiration == "" {
+                return "Please enter expiration."
+            }
+            
+            if let cardSecurity = self.securityTxtField.text, cardSecurity == "" {
+                return "Please enter card security."
+            }
+        }
         
+        if (!self.billingAddressSwitch.isOn) {
+            if let postalCode = self.zipCodeTxtField.text, postalCode == "" {
+                return "Please enter postal code."
+            }
+            
+            if let houseNumber = self.houseNumberTxtField.text, houseNumber == "" {
+                return "Please enter house number."
+            }
+            
+            if let firstLineAddress = self.firstLineAddressTxtField.text, firstLineAddress == "" {
+                return "Please enter address."
+            }
+            
+            if let secondLineAddress = self.secondLineAddressTxtField.text, secondLineAddress == "" {
+                return "Please enter address."
+            }
+            
+            if let townOrCity = self.townOrCityTxtField.text, townOrCity == "" {
+                return "Please enter town or city."
+            }
+            
+            if let country = self.countryLbl.text, country == "Please select country" {
+                return "Please select country."
+            }
+        }
+        
+        return ""
     }
 }

@@ -36,7 +36,7 @@ class SuperViewController: UIViewController {
     
     fileprivate func configureUI() {
         /// Initially show your details container view
-        self.setTopNavigationViews(yourDetails: false, delivery: false, paymentDetails: true)
+        self.setTopNavigationViews(yourDetails: true, delivery: false, paymentDetails: false)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

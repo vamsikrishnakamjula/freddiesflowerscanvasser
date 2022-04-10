@@ -11,12 +11,11 @@ class ThankYouViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
     
     /// Finished Button Touched
     @IBAction func finishedBtnTouched(_ sender: UIButton) {
-        
+        self.performSegue(withIdentifier: "toRegionsAndSourceSegue", sender: nil)
     }
     
     /// Logout Button Touched

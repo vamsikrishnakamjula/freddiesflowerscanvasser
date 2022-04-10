@@ -681,11 +681,11 @@ All for just $49 a box</string>
             <objects>
                 <viewController id="xeQ-qp-DFN" customClass="DeliveryViewController" customModule="contactapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j7s-qX-Gby">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="3700"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="3500"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ff8-ae-8pU">
-                                <rect key="frame" x="0.0" y="24" width="834" height="3676"/>
+                                <rect key="frame" x="0.0" y="24" width="834" height="3476"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IYm-P6-Rt6">
                                         <rect key="frame" x="0.0" y="0.0" width="834" height="3397.5"/>
@@ -1470,7 +1470,7 @@ All for just $49 a box</string>
                             <constraint firstItem="Ff8-ae-8pU" firstAttribute="top" secondItem="bx1-P0-Gew" secondAttribute="top" id="e4i-Xm-8Pv"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="834" height="3700"/>
+                    <size key="freeformSize" width="834" height="3500"/>
                     <connections>
                         <outlet property="activityIndicator" destination="jyA-nK-CUf" id="qsj-7b-NfA"/>
                         <outlet property="addressTxtField" destination="4Fz-7U-4xj" id="fsz-aT-0tQ"/>
@@ -1497,21 +1497,21 @@ All for just $49 a box</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l1s-Dh-wqy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="zY3-VI-yfw" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-81" y="1313"/>
+            <point key="canvasLocation" x="-81" y="1263"/>
         </scene>
         <!--Payment View Controller-->
         <scene sceneID="xtz-ZC-Yih">
             <objects>
                 <viewController id="TWt-y4-Sa9" customClass="PaymentViewController" customModule="contactapp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bnx-pD-kzY">
-                        <rect key="frame" x="0.0" y="0.0" width="834" height="3500"/>
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="3100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdS-2d-YOn">
-                                <rect key="frame" x="0.0" y="24" width="834" height="3476"/>
+                                <rect key="frame" x="0.0" y="24" width="834" height="3076"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YKT-Nd-d6H">
-                                        <rect key="frame" x="0.0" y="0.0" width="834" height="3060.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="834" height="3030.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Details" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dM-c8-Zce">
                                                 <rect key="frame" x="0.0" y="30" width="834" height="41"/>
@@ -1570,7 +1570,7 @@ All for just $49 a box</string>
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="6qr-gX-hVG">
-                                                <rect key="frame" x="0.0" y="429" width="834" height="2494.5"/>
+                                                <rect key="frame" x="0.0" y="429" width="834" height="2551.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jIn-bA-eU8">
                                                         <rect key="frame" x="0.0" y="0.0" width="834" height="170"/>
@@ -2287,12 +2287,12 @@ All for just $49 a box</string>
                                                         </subviews>
                                                         <variation key="heightClass=regular-widthClass=compact" spacing="20"/>
                                                     </stackView>
+                                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="RLN-Xq-rQL">
+                                                        <rect key="frame" x="0.0" y="2514.5" width="834" height="37"/>
+                                                        <color key="color" red="0.69019607839999997" green="0.78823529410000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </activityIndicatorView>
                                                 </subviews>
                                             </stackView>
-                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="RLN-Xq-rQL">
-                                                <rect key="frame" x="398.5" y="2973.5" width="37" height="37"/>
-                                                <color key="color" red="0.69019607839999997" green="0.78823529410000004" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
-                                            </activityIndicatorView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
@@ -2304,14 +2304,12 @@ All for just $49 a box</string>
                                             </constraint>
                                             <constraint firstAttribute="trailing" secondItem="7dM-c8-Zce" secondAttribute="trailing" id="89g-mw-trv"/>
                                             <constraint firstItem="UXO-xU-UfS" firstAttribute="top" secondItem="7dM-c8-Zce" secondAttribute="bottom" constant="50" id="Eu4-lH-c6V"/>
-                                            <constraint firstAttribute="bottom" secondItem="RLN-Xq-rQL" secondAttribute="bottom" constant="50" id="HDi-i7-vG3"/>
-                                            <constraint firstItem="RLN-Xq-rQL" firstAttribute="top" secondItem="6qr-gX-hVG" secondAttribute="bottom" constant="50" id="JuC-9y-kCR"/>
                                             <constraint firstItem="7dM-c8-Zce" firstAttribute="leading" secondItem="YKT-Nd-d6H" secondAttribute="leading" id="Pok-TE-bzn"/>
-                                            <constraint firstItem="RLN-Xq-rQL" firstAttribute="centerX" secondItem="YKT-Nd-d6H" secondAttribute="centerX" id="RgR-KZ-IGV"/>
                                             <constraint firstAttribute="trailing" secondItem="6qr-gX-hVG" secondAttribute="trailing" id="Zq2-i3-25J"/>
                                             <constraint firstItem="UXO-xU-UfS" firstAttribute="leading" secondItem="YKT-Nd-d6H" secondAttribute="leading" id="c6y-zP-CkP"/>
                                             <constraint firstItem="VzV-yL-x2b" firstAttribute="centerX" secondItem="YKT-Nd-d6H" secondAttribute="centerX" id="g9a-8K-hHe"/>
                                             <constraint firstItem="Z4L-bf-U6V" firstAttribute="leading" secondItem="YKT-Nd-d6H" secondAttribute="leading" id="kvA-nf-lcf"/>
+                                            <constraint firstAttribute="bottom" secondItem="6qr-gX-hVG" secondAttribute="bottom" constant="50" id="kxP-mH-Kip"/>
                                             <constraint firstItem="7dM-c8-Zce" firstAttribute="top" secondItem="YKT-Nd-d6H" secondAttribute="top" constant="30" id="n4W-o5-VNm"/>
                                             <constraint firstItem="VzV-yL-x2b" firstAttribute="top" secondItem="Z4L-bf-U6V" secondAttribute="bottom" constant="50" id="ncr-ab-xO0">
                                                 <variation key="heightClass=regular-widthClass=compact" constant="25"/>
@@ -2344,7 +2342,7 @@ All for just $49 a box</string>
                             <constraint firstAttribute="bottom" secondItem="KdS-2d-YOn" secondAttribute="bottom" id="tKY-ya-YOb"/>
                         </constraints>
                     </view>
-                    <size key="freeformSize" width="834" height="3500"/>
+                    <size key="freeformSize" width="834" height="3100"/>
                     <connections>
                         <outlet property="activityIndicator" destination="RLN-Xq-rQL" id="bhJ-8n-zFQ"/>
                         <outlet property="billingAddressStkView" destination="yjp-KX-N3K" id="cIx-hl-NBe"/>
@@ -2376,12 +2374,21 @@ All for just $49 a box</string>
                         <outlet property="townOrCityTxtField" destination="V2J-sv-XhV" id="ZsK-P3-0bH"/>
                         <outlet property="zipCodeTxtField" destination="XRE-3S-OXf" id="TkV-v9-wH1"/>
                         <segue destination="3zO-IJ-zsN" kind="unwind" identifier="toLogoutSegue" unwindAction="unwind:" id="AaA-RG-cUQ"/>
+                        <segue destination="2OO-Wb-y2w" kind="presentation" identifier="toThankYouSegue" modalPresentationStyle="fullScreen" id="kfX-Wy-pfT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="llz-L6-qDD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="3zO-IJ-zsN" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="708" y="1061"/>
+            <point key="canvasLocation" x="738" y="1162"/>
+        </scene>
+        <!--ThankYou-->
+        <scene sceneID="4Ag-0i-85i">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ThankYou" id="2OO-Wb-y2w" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rOv-gv-3BG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1299" y="1307"/>
         </scene>
     </scenes>
     <resources>
