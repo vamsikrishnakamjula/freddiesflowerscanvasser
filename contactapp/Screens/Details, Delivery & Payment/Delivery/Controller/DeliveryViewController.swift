@@ -45,7 +45,7 @@ class DeliveryViewController: UIViewController {
     var customerDetails: CustomerDetails?
     
     /// Delegate
-    var delegate: SuperViewDetailsDelegate?
+    weak var customerDetailsDelegate: CustomerDetailsDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +54,6 @@ class DeliveryViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.configureUI()
-        print(customerDetails)
     }
     
     fileprivate func configureUI() {
@@ -225,7 +224,8 @@ class DeliveryViewController: UIViewController {
                     } else if let responseData = data {
                         if let success = responseData.status, success {
                             /// Success Navigation to Delivery details
-                            self.delegate?.updateCustomerDetails(details: customerDetails, yourDetails: false, delivery: false, paymentDetails: true)
+                            self.customerDetailsDelegate?.updateCustomerDetails(details: customerDetails)
+                            self.customerDetailsDelegate?.fixNaviation(yourDetails: false, delivery: false, paymentDetails: true)
                         } else {
                             self.presentAlert(title: "Error!", message: "Please check Telephone number, please try again.")
                         }
@@ -312,4 +312,12 @@ extension DeliveryViewController: UITextFieldDelegate {
             self.getDeliveryDays(postalCode: self.zipCodeTxtField.text ?? "")
         }
     }
+}
+
+extension DeliveryViewController: CustomerDetailsDelegate {
+    func updateCustomerDetails(details: CustomerDetails) {
+        self.customerDetails = details
+    }
+    
+    func fixNaviation(yourDetails: Bool, delivery: Bool, paymentDetails: Bool) {}
 }

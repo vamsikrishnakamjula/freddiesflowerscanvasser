@@ -753,7 +753,7 @@ All for just $49 a box</string>
                                                                             </constraint>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
-                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="email"/>
+                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" textContentType="address-line1"/>
                                                                         <variation key="heightClass=regular-widthClass=compact">
                                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                                                         </variation>
@@ -780,7 +780,7 @@ All for just $49 a box</string>
                                                                             </constraint>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
-                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="email"/>
+                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" textContentType="address-line2"/>
                                                                         <variation key="heightClass=regular-widthClass=compact">
                                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                                                         </variation>
@@ -807,7 +807,7 @@ All for just $49 a box</string>
                                                                             </constraint>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
-                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="email"/>
+                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" textContentType="postal-code"/>
                                                                         <variation key="heightClass=regular-widthClass=compact">
                                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                                                         </variation>
@@ -837,7 +837,7 @@ All for just $49 a box</string>
                                                                             </constraint>
                                                                         </constraints>
                                                                         <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="25"/>
-                                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="email"/>
+                                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" textContentType="address-level1+2"/>
                                                                         <variation key="heightClass=regular-widthClass=compact">
                                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                                                         </variation>

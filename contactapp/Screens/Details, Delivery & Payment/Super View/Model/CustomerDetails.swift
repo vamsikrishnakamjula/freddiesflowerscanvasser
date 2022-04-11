@@ -7,8 +7,9 @@
 
 import Foundation
 
-protocol SuperViewDetailsDelegate {
-    func updateCustomerDetails(details: CustomerDetails, yourDetails: Bool, delivery: Bool, paymentDetails: Bool)
+protocol CustomerDetailsDelegate: class {
+    func updateCustomerDetails(details: CustomerDetails)
+    func fixNaviation(yourDetails: Bool, delivery: Bool, paymentDetails: Bool)
 }
 
 struct CustomerDetails {

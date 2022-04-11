@@ -24,7 +24,7 @@ class DetailsViewController: UIViewController {
     var source = ""
     
     /// Delegate
-    var delegate: SuperViewDetailsDelegate?
+    weak var delegate: CustomerDetailsDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -97,7 +97,8 @@ class DetailsViewController: UIViewController {
                             } else if let responseData = data {
                                 if let success = responseData.status, success {
                                     /// Success Navigation to Delivery details
-                                    self.delegate?.updateCustomerDetails(details: customerDetails, yourDetails: false, delivery: true, paymentDetails: false)
+                                    self.delegate?.updateCustomerDetails(details: customerDetails)
+                                    self.delegate?.fixNaviation(yourDetails: false, delivery: true, paymentDetails: false)
                                 } else {
                                     self.presentAlert(title: "Error!", message: "Something went wrong, please try again later.")
                                 }

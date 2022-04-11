@@ -25,6 +25,9 @@ class SuperViewController: UIViewController {
     /// Stored Properties
     var customerDetails: CustomerDetails?
     
+    /// Delegates
+    weak var customerDetailsDelegate: CustomerDetailsDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -46,11 +49,12 @@ class SuperViewController: UIViewController {
             }
         } else if (segue.identifier == "toDeliverySegue") {
             if let deliveryVC = segue.destination as? DeliveryViewController {
-                deliveryVC.delegate = self
+                self.customerDetailsDelegate = deliveryVC
+                deliveryVC.customerDetailsDelegate = self
             }
         } else if (segue.identifier == "toPaymentDetailsSegue") {
             if let paymentDetailsVC = segue.destination as? PaymentViewController {
-                paymentDetailsVC.delegate = self
+                
             }
         }
     }
@@ -146,9 +150,12 @@ class SuperViewController: UIViewController {
     }
 }
 
-extension SuperViewController: SuperViewDetailsDelegate {
-    func updateCustomerDetails(details: CustomerDetails, yourDetails: Bool, delivery: Bool, paymentDetails: Bool) {
-        self.customerDetails = details
+extension SuperViewController: CustomerDetailsDelegate {
+    func updateCustomerDetails(details: CustomerDetails) {
+        self.customerDetailsDelegate?.updateCustomerDetails(details: details)
+    }
+    
+    func fixNaviation(yourDetails: Bool, delivery: Bool, paymentDetails: Bool) {
         self.setTopNavigationViews(yourDetails: yourDetails, delivery: delivery, paymentDetails: paymentDetails)
     }
 }
