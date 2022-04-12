@@ -41,3 +41,9 @@ struct OfferCodeResponse: Codable {
     let shipping_amount: Double?
     let discount_shipping_amount: Double?
 }
+
+struct DeliveryResponseModel: Codable {
+    let title: String?
+    let message: String?
+    let status: Bool?
+}

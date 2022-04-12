@@ -215,17 +215,28 @@ class DeliveryViewController: UIViewController {
             sender.isEnabled = true
         } else {
             if let details = self.customerDetails {
-                let deliveryDetails = DeliveryDetails(deliveryAddressHouseNumber: "", deliveryAddressLineOne: self.addressTxtField.text ?? "", deliveryAddressLineTwo: self.apartmentOrSuiteTxtField.text ?? "", deliveryAddressCity: self.townOrCityTxtField.text ?? "", deliveryAddressPostalCode: self.zipCodeTxtField.text ?? "", deliveryAddressState: self.stateLbl.text ?? "", deliveryAddressCountry: "", deliveryAddressCountryISO: "", deliveryAddressPropertyType: self.buildingOptions[self.buildingSegmentContrl.selectedSegmentIndex], deliveryInstructions: self.notAtHomeNotesView.text ?? "")
+                let deliveryDetails = DeliveryDetails(deliveryAddressHouseNumber: "", deliveryAddressLineOne: self.addressTxtField.text ?? "", deliveryAddressLineTwo: self.apartmentOrSuiteTxtField.text ?? "", deliveryAddressCity: self.townOrCityTxtField.text ?? "", deliveryAddressPostalCode: self.zipCodeTxtField.text ?? "", deliveryAddressState: self.stateLbl.text ?? "", deliveryAddressCountry: "United States of America", deliveryAddressCountryISO: "USA", deliveryAddressPropertyType: self.buildingOptions[self.buildingSegmentContrl.selectedSegmentIndex], deliveryInstructions: self.notAtHomeNotesView.text ?? "")
                 let offerDetails = OfferDetails(friendCode: self.offerCodeTxtField.text ?? "")
-                let customerDetails = CustomerDetails(firstName: details.firstName, lastName: details.lastName, email: details.email, password: details.password, telephone: self.phoneNumberTxtField.text ?? "", optInMarketing: self.promotionsSwitch.isOn, optInThirdPartyMarketing: self.promotionsSwitch.isOn, delivery: deliveryDetails, offer: offerDetails)
+                let requestCustomerDetails = CustomerDetails(firstName: details.firstName, lastName: details.lastName, email: details.email, password: details.password, telephone: self.phoneNumberTxtField.text ?? "", optInMarketing: self.promotionsSwitch.isOn, optInThirdPartyMarketing: self.promotionsSwitch.isOn, delivery: deliveryDetails, offer: offerDetails)
                 DeliveryNetwork.shared.checkTelephoneNumber(telephone: self.phoneNumberTxtField.text ?? "") { data, error in
                     if (error != nil) {
                         self.presentAlert(title: "Sources Error", message: error?.localizedDescription ?? "")
                     } else if let responseData = data {
                         if let success = responseData.status, success {
-                            /// Success Navigation to Delivery details
-                            self.customerDetailsDelegate?.updateCustomerDetails(details: customerDetails)
-                            self.customerDetailsDelegate?.fixNaviation(yourDetails: false, delivery: false, paymentDetails: true)
+                            /// After Phone Number check, Sign Up Delivery Details
+                            DeliveryNetwork.shared.signUpDelivery(details: requestCustomerDetails) { data, error in
+                                if (error != nil) {
+                                    self.presentAlert(title: "Sources Error", message: error?.localizedDescription ?? "")
+                                } else if let responseData = data {
+                                    if let success = responseData.status, success {
+                                        /// Success Navigation to Delivery details
+                                        self.customerDetailsDelegate?.updateCustomerDetails(details: requestCustomerDetails)
+                                        self.customerDetailsDelegate?.fixNaviation(yourDetails: false, delivery: false, paymentDetails: true)
+                                    } else {
+                                        self.presentAlert(title: "Error!", message: "Please check Telephone number, please try again.")
+                                    }
+                                }
+                            }
                         } else {
                             self.presentAlert(title: "Error!", message: "Please check Telephone number, please try again.")
                         }

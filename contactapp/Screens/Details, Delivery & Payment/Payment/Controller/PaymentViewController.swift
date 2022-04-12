@@ -322,45 +322,6 @@ class PaymentViewController: UIViewController {
         self.checkOfferCode(postalCode: "93601", offerCode: self.offerCodeTxtField.text ?? "")
     }
     
-    fileprivate func checkOfferCode(postalCode: String, offerCode: String) {
-        DeliveryNetwork.shared.offerCode(postalCode: postalCode, friendCode: offerCode) { data, error in
-            if (error != nil) {
-                self.presentAlert(title: "Offer Code Error", message: error?.localizedDescription ?? "")
-            } else if let responseData = data {
-                self.updateOrderSummary(offerCodeResponse: responseData)
-            }
-        }
-    }
-    
-    fileprivate func updateOrderSummary(offerCodeResponse: OfferCodeResponse) {
-        if let price = offerCodeResponse.price, let discountedPrice = offerCodeResponse.discounted_price {
-            self.freshWeeklyFlowersLbl.text = "$\(price) $\(price - discountedPrice)"
-            switch UIDevice.current.userInterfaceIdiom {
-            case .phone:
-                self.freshWeeklyFlowersLbl.highlight(text: "$\(price)", font: UIFont(name: "Avenir-Medium", size: 20.0)!, color: UIColor.red)
-            case .pad:
-                self.freshWeeklyFlowersLbl.highlight(text: "$\(price)", font: UIFont(name: "Avenir-Medium", size: 25.0)!, color: UIColor.red)
-            default:
-                self.freshWeeklyFlowersLbl.highlight(text: "$\(price)", font: UIFont(name: "Avenir-Medium", size: 20.0)!, color: UIColor.red)
-            }
-            self.totalLbl.text = "$\(price - discountedPrice)"
-        }
-        
-        if let tax = offerCodeResponse.tax, let discountedTax = offerCodeResponse.discounted_tax {
-            self.salesTaxLbl.text = "\(tax) \(tax - discountedTax)"
-            switch UIDevice.current.userInterfaceIdiom {
-            case .phone:
-                self.salesTaxLbl.highlight(text: "\(tax)", font: UIFont(name: "Avenir-Medium", size: 20.0)!, color: UIColor.red)
-            case .pad:
-                self.salesTaxLbl.highlight(text: "\(tax)", font: UIFont(name: "Avenir-Medium", size: 25.0)!, color: UIColor.red)
-            default:
-                self.salesTaxLbl.highlight(text: "\(tax)", font: UIFont(name: "Avenir-Medium", size: 20.0)!, color: UIColor.red)
-            }
-        }
-        
-        self.deliveryLbl.text = "Free"
-    }
-    
     /// Privacy Button Touched
     @IBAction func privacyBtnTouched(_ sender: UIButton) {
         self.presentPrivacyPolicyView()

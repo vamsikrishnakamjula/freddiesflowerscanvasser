@@ -7,22 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1718A8D6-DAFC-4077-A7B6-894EBF829940"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "contactapp/Screens/Details, Delivery &amp; Payment/Delivery/Controller/DeliveryViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "319"
-            endingLineNumber = "319"
-            landmarkName = "updateCustomerDetails(details:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "EBD4A2FF-542E-4520-840C-44D371F7B9AE"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -39,16 +23,96 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "78F36E78-DD8B-41F2-945E-5DF7BDB7C05A"
+            uuid = "B1D880F7-E54D-4AB6-8E8F-B147816B1940"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "contactapp/Screens/Details, Delivery &amp; Payment/Delivery/Controller/DeliveryViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "227"
-            endingLineNumber = "227"
+            startingLineNumber = "228"
+            endingLineNumber = "228"
             landmarkName = "signMeUpBtnTouched(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4C6B3521-961D-4F68-927D-A5A3D10B889F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "contactapp/Screens/Details, Delivery &amp; Payment/Delivery/Network/DeliveryNetwork.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "152"
+            endingLineNumber = "152"
+            landmarkName = "signUpDelivery(details:onCompletion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4C6B3521-961D-4F68-927D-A5A3D10B889F - 2181d6c4aa3c1f3c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "contactapp.DeliveryNetwork.signUpDelivery(details: contactapp.CustomerDetails, onCompletion: (Swift.Optional&lt;contactapp.DeliveryResponseModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "contactapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vamsikamjula/Desktop/Projects/contactapp/contactapp/Screens/Details,%20Delivery%20&amp;%20Payment/Delivery/Network/DeliveryNetwork.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "1188">
+               </Location>
+               <Location
+                  uuid = "4C6B3521-961D-4F68-927D-A5A3D10B889F - 2181d6c4aa3c1f3c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "contactapp.DeliveryNetwork.signUpDelivery(details: contactapp.CustomerDetails, onCompletion: (Swift.Optional&lt;contactapp.DeliveryResponseModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "contactapp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vamsikamjula/Desktop/Projects/contactapp/contactapp/Screens/Details,%20Delivery%20&amp;%20Payment/Delivery/Network/DeliveryNetwork.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "152"
+                  endingLineNumber = "152"
+                  offsetFromSymbolStart = "1236">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A3A43FB0-E5F4-4175-A704-061DB4057E52"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "contactapp/Screens/Details, Delivery &amp; Payment/Delivery/Network/DeliveryNetwork.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
+            landmarkName = "signUpDelivery(details:onCompletion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2F83266E-07D7-49E9-8616-244354B592D7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "contactapp/Screens/Details, Delivery &amp; Payment/Delivery/Network/DeliveryNetwork.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "171"
+            endingLineNumber = "171"
+            landmarkName = "signUpDelivery(details:onCompletion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
