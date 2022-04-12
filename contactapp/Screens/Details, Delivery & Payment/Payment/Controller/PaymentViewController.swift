@@ -159,11 +159,11 @@ class PaymentViewController: UIViewController {
             self.freshWeeklyFlowersLbl.text = "$\(price) $\(price - discountedPrice)"
             switch UIDevice.current.userInterfaceIdiom {
             case .phone:
-                self.freshWeeklyFlowersLbl.highlight(text: "$\(price)", font: UIFont(name: "Avenir-Medium", size: 20.0)!, color: UIColor.red)
+                self.freshWeeklyFlowersLbl.highlight(text: "$\(price)", font: UIFont(name: "Avenir-Medium", size: 15.0)!, color: UIColor.red)
             case .pad:
-                self.freshWeeklyFlowersLbl.highlight(text: "$\(price)", font: UIFont(name: "Avenir-Medium", size: 25.0)!, color: UIColor.red)
-            default:
                 self.freshWeeklyFlowersLbl.highlight(text: "$\(price)", font: UIFont(name: "Avenir-Medium", size: 20.0)!, color: UIColor.red)
+            default:
+                self.freshWeeklyFlowersLbl.highlight(text: "$\(price)", font: UIFont(name: "Avenir-Medium", size: 15.0)!, color: UIColor.red)
             }
             self.totalLbl.text = "$\(price - discountedPrice)"
         }
@@ -212,6 +212,7 @@ class PaymentViewController: UIViewController {
         self.salesTaxLbl.text = "$TBC"
         self.totalLbl.text = "$44"
         self.offerCodeTxtField.text = ""
+        self.cardReaderOptionsStkView.isHidden = true
         self.offerCodeStkView.isHidden = true
         
         self.resetBillingAddressInputFields()
@@ -230,11 +231,11 @@ class PaymentViewController: UIViewController {
     @IBAction func paymentOptionsSegmentCntrlChanged(_ sender: UISegmentedControl) {
         switch (sender.selectedSegmentIndex) {
         case 0:
-            self.cardReaderOptionsStkView.isHidden = false
+            self.cardReaderOptionsStkView.isHidden = true
         case 1:
             self.cardReaderOptionsStkView.isHidden = true
         default:
-            self.cardReaderOptionsStkView.isHidden = false
+            self.cardReaderOptionsStkView.isHidden = true
         }
     }
     
@@ -400,5 +401,12 @@ class PaymentViewController: UIViewController {
         }
         
         return ""
+    }
+}
+
+extension PaymentViewController: DeliveryDetailsDelegate {
+    func updateDeliveryDetails(details: CustomerDetails) {
+        self.customerDetails = details
+        self.configureUI()
     }
 }

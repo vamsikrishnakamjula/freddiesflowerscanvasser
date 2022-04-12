@@ -798,7 +798,7 @@
 				DEVELOPMENT_TEAM = ZELVJRAH4Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = contactapp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Freddie's Flowers";
+				INFOPLIST_KEY_CFBundleDisplayName = Canvasser;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Login;
@@ -832,7 +832,7 @@
 				DEVELOPMENT_TEAM = ZELVJRAH4Y;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = contactapp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Freddie's Flowers";
+				INFOPLIST_KEY_CFBundleDisplayName = Canvasser;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Login;

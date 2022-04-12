@@ -210,6 +210,7 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="RiA-NY-HFe"/>
                     <connections>
                         <outlet property="activityIndicator" destination="jFi-T6-BHi" id="kl9-wj-zph"/>
+                        <outlet property="discoverReaderBtn" destination="6g7-B7-Vce" id="krd-3D-qen"/>
                         <outlet property="emailTxtField" destination="CbS-qh-fKu" id="fPJ-I4-P0W"/>
                         <outlet property="passwordTxtField" destination="hTh-tP-eGk" id="OjY-Fx-S9P"/>
                         <segue destination="idJ-Fo-BWu" kind="presentation" identifier="toRegionsAndSourceSegue" modalPresentationStyle="fullScreen" id="og1-8D-IQO"/>

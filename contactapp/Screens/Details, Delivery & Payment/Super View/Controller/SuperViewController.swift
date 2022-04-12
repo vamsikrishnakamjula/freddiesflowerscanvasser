@@ -27,6 +27,7 @@ class SuperViewController: UIViewController {
     
     /// Delegates
     weak var customerDetailsDelegate: CustomerDetailsDelegate?
+    weak var deliveryDetailsDelegate: DeliveryDetailsDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +55,7 @@ class SuperViewController: UIViewController {
             }
         } else if (segue.identifier == "toPaymentDetailsSegue") {
             if let paymentDetailsVC = segue.destination as? PaymentViewController {
-                
+                self.deliveryDetailsDelegate = paymentDetailsVC
             }
         }
     }
@@ -153,6 +154,7 @@ class SuperViewController: UIViewController {
 extension SuperViewController: CustomerDetailsDelegate {
     func updateCustomerDetails(details: CustomerDetails) {
         self.customerDetailsDelegate?.updateCustomerDetails(details: details)
+        self.deliveryDetailsDelegate?.updateDeliveryDetails(details: details)
     }
     
     func fixNaviation(yourDetails: Bool, delivery: Bool, paymentDetails: Bool) {

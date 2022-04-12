@@ -12,6 +12,7 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
     /// Outlets - Input Fields
     @IBOutlet weak var emailTxtField: UITextField!
     @IBOutlet weak var passwordTxtField: UITextField!
+    @IBOutlet weak var discoverReaderBtn: UIButton!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
@@ -22,10 +23,9 @@ class LoginViewController: UIViewController, UIScrollViewDelegate {
         super.viewWillAppear(animated)
         self.setupNavigationUI()
         self.hideKeyboardOnTap()
+        self.discoverReaderBtn.isHidden = true
         self.activityIndicator.isHidden = true
         self.activityIndicator.stopAnimating()
-        self.emailTxtField.text = "canvasser@ff.us"
-        self.passwordTxtField.text = "canvasser@ff.us"
     }
     
     /// Login Button Touched

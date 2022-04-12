@@ -12,6 +12,10 @@ protocol CustomerDetailsDelegate: class {
     func fixNaviation(yourDetails: Bool, delivery: Bool, paymentDetails: Bool)
 }
 
+protocol DeliveryDetailsDelegate: class {
+    func updateDeliveryDetails(details: CustomerDetails)
+}
+
 struct CustomerDetails {
     let firstName: String?
     let lastName: String?

@@ -320,6 +320,8 @@ class DeliveryViewController: UIViewController {
 extension DeliveryViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         if (textField == self.zipCodeTxtField) {
+            self.deliveryDates.removeAll()
+            self.deliveryOptions.removeAll()
             self.getDeliveryDays(postalCode: self.zipCodeTxtField.text ?? "")
         }
     }
